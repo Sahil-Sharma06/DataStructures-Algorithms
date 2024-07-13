@@ -4,10 +4,11 @@ import java.util.*;
 public class FrequencyInArray{
     
     private static int hashArr[] = new int[100000000];
-    // Arrays.fill(hashArr, 0);
 
     static{
-        Arrays.fill(hashArr, 0);
+        for(int i = 0; i < hashArr.length; i++) {
+            hashArr[i] = 0;
+        }
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
