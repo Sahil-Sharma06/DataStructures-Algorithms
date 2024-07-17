@@ -1,7 +1,7 @@
 import java.util.*;
 public class MoveZeroesToEnd{
 
-    // BruteForce Approach 
+    // BruteForce Approach for the problem
     public static void moveZeroesToEnd(int[] arr, int n){
         List<Integer> temp = new ArrayList<>();
         for(int i = 0 ; i < n ; i++){
@@ -25,7 +25,7 @@ public class MoveZeroesToEnd{
 
     }
 
-    // Optimal Approach 
+    // Optimal Approach for the problem
 
     public static void moveZeroesToEndOptimal(int[] arr,int n){
         int j = -1;
