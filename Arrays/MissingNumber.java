@@ -33,6 +33,31 @@ public class MissingNumber {
         return -1;
     }
 
+    // Optimal Approach 1
+    public static int missingNumberOptimalOne(int[] a, int  N){
+        int sum = (N*(N+1)/2);
+        int sum2 = 0;
+        for(int i = 0 ; i < N-1 ; i++){
+            sum2 += a[i];
+        }
+
+        int missingnNumber = sum - sum2;
+
+        return missingnNumber;
+    }
+
+    static int missingNumberOptimalTwo(int[] a, int N){
+        int XOR1 = 0;
+        int XOR2 = 0;
+        for(int i = 0 ; i < N-1 ; i++){
+            XOR2 ^= a[i];
+            XOR1 ^= i+1;
+        }
+        XOR1 ^= N;
+
+        return (XOR1 ^ XOR2);
+    }
+
     public static void main(String[] args) { 
         int N = 5;
         int a[] = {1, 2, 4, 5};
