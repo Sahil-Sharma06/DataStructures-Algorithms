@@ -1,5 +1,6 @@
 public class NumberAppearingOnce {
 
+    // BruteForce Approach 
     static int numberAppearingOnce(int[] arr,int N){
         for(int i = 0 ; i < N ; i++){
             int num = arr[i];
