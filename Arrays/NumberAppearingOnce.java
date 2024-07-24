@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class NumberAppearingOnce {
 
     // BruteForce Approach 
@@ -15,6 +18,48 @@ public class NumberAppearingOnce {
             }
         }
         return -1;
+    }
+
+    // Better Approach 01 
+    static int numberAppearinOnceBetter01(int[] arr,int n){
+        int maxi = arr[0];
+        for (int i = 0; i < n; i++) {
+            maxi = Math.max(maxi, arr[i]);
+        }
+
+        int[] hash = new int[maxi + 1];
+        for (int i = 0; i < n; i++) {
+            hash[arr[i]]++;
+        }
+        for (int i = 0; i < n; i++) {
+            if (hash[arr[i]] == 1)
+                return arr[i];
+        }
+        return -1;
+    }
+
+    // Better Approach 02
+
+    static int numberAppearingOnceBetterTwo(int[] arr, int n){
+        HashMap<Integer, Integer> mpp = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            int value = mpp.getOrDefault(arr[i], 0);
+            mpp.put(arr[i], value + 1);
+        }
+        for (Map.Entry<Integer, Integer> it : mpp.entrySet()) {
+            if (it.getValue() == 1) {
+                return it.getKey();
+            }
+        }
+        return -1;
+    }
+
+    static int numberAppearingOnceOptimal(int [] arr, int n){
+          int xorr = 0;
+        for (int i = 0; i < n; i++) {
+            xorr = xorr ^ arr[i];
+        }
+        return xorr;
     }
     public static void main(String[] args) {
         int[] arr = {4, 1, 2, 1, 2};
