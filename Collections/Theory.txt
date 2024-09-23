@@ -1,0 +1,9 @@
+## Collections:
+
+A collection allows a group of object to be treated as a single unit.
+
+Java collection frameworks provides a set of standard utility classes for managing various kinds of collections. The core framework is provided in the java.util package and comprises of three main parts:
+
+1. The core interfaces.
+2. A set of implementations that are specific implementations of the core interfaces.
+3. Static utility methods found in the collections and arrays classes that can be used to perform various operations on collection and arrays such as sorting and searching, or creating customized collections.
