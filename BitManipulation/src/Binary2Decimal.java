@@ -1,4 +1,5 @@
 public class Binary2Decimal {
+
     public static void main(String[] args) {
         int decimalNumber = 15;
 
@@ -13,5 +14,12 @@ public class Binary2Decimal {
         }
 
         System.out.println("Binary Number of the decimal is:" + binaryNumber);
+        Binary2Decimalfuntion();
+    }
+
+    private static void Binary2Decimalfuntion() {
+        String binaryString = "1010"; // Example binary string
+        int decimal = Integer.parseInt(binaryString, 2); // Convert binary to decimal
+        System.out.println("Binary: " + binaryString + " in Decimal: " + decimal);
     }
 }
