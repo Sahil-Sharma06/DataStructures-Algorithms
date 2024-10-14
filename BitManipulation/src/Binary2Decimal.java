@@ -12,6 +12,6 @@ public class Binary2Decimal {
             decimalNumber /= 2;
         }
 
-        System.out.println("Binary Number :" + binaryNumber);
+        System.out.println("Binary Number of the decimal is:" + binaryNumber);
     }
 }
