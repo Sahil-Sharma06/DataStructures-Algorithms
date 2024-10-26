@@ -21,7 +21,7 @@ class Node{
 }
 public class introDLL {
 
-    private static Node convertArrayToDLL(int[] arr){
+     static Node convertArrayToDLL(int[] arr){
         int n = arr.length;
         Node head = new Node(arr[0]);
         Node prev = head;
@@ -33,7 +33,7 @@ public class introDLL {
         return head;
     }
 
-    private static void printLL(Node head){
+    static void printLL(Node head){
         Node temp = head;
         while(temp != null){
             System.out.print(temp.data + " ");
